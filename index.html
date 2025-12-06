@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="left">Task Pro</div>
+         <div class="middle" id="nav-username"></div> 
+        <div class="right">
+          <button id="toggle-modal">Add New Task</button>
+        </div>
+      </nav>
+      <section class="board">
+        <div id="todo" class="task-column">
+          <div class="heading">
+            <div class="left">To Do</div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <div id="progress" class="task-column">
+          <div class="heading">
+            <div class="left">In Progress</div>
+            <div class="right">0</div>
+          </div>
+        </div>
+        <div id="done" class="task-column">
+          <div class="heading">
+            <div class="left">Done</div>
+            <div class="right">0</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal add-new-task">
+      <div class="bg"></div>
+      <div class="center">
+        <h1>Add New Task</h1>
+        <input
+          type="text"
+          name=""
+          id="task-title"
+          placeholder="Task Title"
+          autocomplete="off"
+        />
+        <textarea
+          name="Task Description"
+          id="task-description"
+          rows="10"
+          placeholder="Task Description..."
+        ></textarea>
+        <button id="add-new-task" class="add-task-btn">Add Task</button>
+      </div>
+    </div>
+
+    <div class="modal welcome">
+      <div class="center">
+        Welcome to the TaskPro App
+        <input
+          type="text"
+          id="username"
+          placeholder="What should we call you?"
+        />
+        <button id="btn-username">Start Creating Tasks</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
